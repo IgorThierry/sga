@@ -24,17 +24,18 @@ char lerCaractere()
 {
   char caractere;
 
-  do
+  while (1)
   {
-    caractere = getchar();
+    scanf(" %c", &caractere);
+
     while (getchar() != '\n')
       ; // Limpa o buffer de entrada
 
-    if (caractere != 'm' && caractere != 'f' && caractere != 'o')
-    {
-      printf("Entrada inválida. Tente novamente (m, f ou o): ");
-    }
-  } while (caractere != 'm' && caractere != 'f' && caractere != 'o');
+    if (caractere == 'm' || caractere == 'f' || caractere == 'o')
+      break;
+
+    printf("Entrada inválida. Tente novamente [m/f/o]:");
+  }
 
   return caractere;
 }
@@ -58,7 +59,7 @@ void cadastrarAluno()
   printf("Idade: ");
   scanf("%d", &alunos[quantidadeAlunos].idade);
 
-  printf("Gênero (m, f ou o): ");
+  printf("Gênero [m/f/o]: ");
   alunos[quantidadeAlunos].genero = lerCaractere();
 
   printf("Média das notas: ");
