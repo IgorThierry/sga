@@ -190,14 +190,16 @@ int desenharMenu()
 {
   int opcao;
 
+  printf("********** SGA - Sistema de Gerenciamento de Alunos **********");
   printf("\n");
-  printf("1. Cadastrar aluno\n");
-  printf("2. Listar alunos\n");
-  printf("3. Calcular média geral\n");
-  printf("4. Pesquisar aluno por matrícula\n");
-  printf("5. Atualizar dados do aluno\n");
-  printf("6. Remover aluno\n");
-  printf("0. Sair\n");
+  printf("* 1. Cadastrar aluno                                         *\n");
+  printf("* 2. Listar alunos                                           *\n");
+  printf("* 3. Calcular média geral                                    *\n");
+  printf("* 4. Pesquisar aluno por matrícula                           *\n");
+  printf("* 5. Atualizar dados do aluno                                *\n");
+  printf("* 6. Remover aluno                                           *\n");
+  printf("* 0. Sair                                                    *\n");
+  printf("**************************************************************\n");
   printf("Digite a opção desejada: ");
   scanf("%d", &opcao);
 
@@ -207,7 +209,6 @@ int desenharMenu()
 int main()
 {
   setlocale(LC_ALL, "Portuguese_Brasil");
-  printf("SGA - Sistema de Gerenciamento de Alunos");
 
   int opcao;
 
