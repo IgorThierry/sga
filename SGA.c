@@ -77,6 +77,7 @@ void listarAlunos()
     return;
   }
 
+  printf("-----------------------\n");
   printf("Lista de Alunos:\n");
   for (int i = 0; i < quantidadeAlunos; i++)
   {
