@@ -22,21 +22,21 @@ int quantidadeAlunos = 0;
 
 char lerCaractere()
 {
-  char valor;
-  scanf(" %c", &valor);
+  char caractere;
 
-  while (valor != 'm' && valor != 'f' && valor != 'o')
+  do
   {
-    printf("Entrada inválida. Tente novamente (m, f ou o): ");
-    // Limpa o buffer de entrada
+    caractere = getchar();
     while (getchar() != '\n')
-      ;
-    scanf(" %c", &valor);
-  }
+      ; // Limpa o buffer de entrada
 
-  while (getchar() != '\n')
-    ;
-  return valor;
+    if (caractere != 'm' && caractere != 'f' && caractere != 'o')
+    {
+      printf("Entrada inválida. Tente novamente (m, f ou o): ");
+    }
+  } while (caractere != 'm' && caractere != 'f' && caractere != 'o');
+
+  return caractere;
 }
 
 void cadastrarAluno()
