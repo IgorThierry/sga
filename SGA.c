@@ -187,6 +187,7 @@ int desenharMenu()
 int main()
 {
   setlocale(LC_ALL, "Portuguese_Brasil");
+  printf("SGA - Sistema de Gerenciamento de Alunos");
 
   int opcao;
 
