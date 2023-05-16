@@ -186,8 +186,8 @@ int desenharMenu()
 
 int main()
 {
-  setlocale(LC_ALL, "portuguese");
-  
+  setlocale(LC_ALL, "Portuguese_Brasil");
+
   int opcao;
 
   do
