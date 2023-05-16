@@ -20,6 +20,25 @@ typedef struct
 Aluno alunos[MAX_STUDENTS];
 int quantidadeAlunos = 0;
 
+char lerCaractere()
+{
+  char valor;
+  scanf(" %c", &valor);
+
+  while (valor != 'm' && valor != 'f' && valor != 'o')
+  {
+    printf("Entrada inválida. Tente novamente (m, f ou o): ");
+    // Limpa o buffer de entrada
+    while (getchar() != '\n')
+      ;
+    scanf(" %c", &valor);
+  }
+
+  while (getchar() != '\n')
+    ;
+  return valor;
+}
+
 void cadastrarAluno()
 {
   if (quantidadeAlunos >= MAX_STUDENTS)
@@ -39,8 +58,8 @@ void cadastrarAluno()
   printf("Idade: ");
   scanf("%d", &alunos[quantidadeAlunos].idade);
 
-  printf("Gênero: ");
-  scanf(" %c", &alunos[quantidadeAlunos].genero);
+  printf("Gênero (m, f ou o): ");
+  alunos[quantidadeAlunos].genero = lerCaractere();
 
   printf("Média das notas: ");
   scanf("%f", &alunos[quantidadeAlunos].mediaNotas);
