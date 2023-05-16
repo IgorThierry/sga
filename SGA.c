@@ -190,8 +190,7 @@ int desenharMenu()
 {
   int opcao;
 
-  printf("********** SGA - Sistema de Gerenciamento de Alunos **********");
-  printf("\n");
+  printf("********** SGA - Sistema de Gerenciamento de Alunos **********\n");
   printf("* 1. Cadastrar aluno                                         *\n");
   printf("* 2. Listar alunos                                           *\n");
   printf("* 3. Calcular média geral                                    *\n");
